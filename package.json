@@ -1,0 +1,23 @@
+{
+  "name": "documentacao-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/swagger": "^9.5.1",
+    "fastify": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
