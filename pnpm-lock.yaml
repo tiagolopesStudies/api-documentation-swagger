@@ -20,6 +20,12 @@ importers:
       fastify:
         specifier: ^5.5.0
         version: 5.5.0
+      fastify-type-provider-zod:
+        specifier: ^5.0.3
+        version: 5.0.3(@fastify/swagger@9.5.1)(fastify@5.5.0)(openapi-types@12.1.3)(zod@4.1.5)
+      zod:
+        specifier: ^4.1.5
+        version: 4.1.5
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -435,6 +441,14 @@ packages:
   fastify-plugin@5.0.1:
     resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
 
+  fastify-type-provider-zod@5.0.3:
+    resolution: {integrity: sha512-h+/SL9qWD+J5OS4UZ86YnbQA/gaeTqKXqUDbYFm3NZYAhjVVqALCp/UBHFXnH/lv+TpBFyv8uKQ/U1692j0N1g==}
+    peerDependencies:
+      '@fastify/swagger': '>=9.5.1'
+      fastify: ^5.0.0
+      openapi-types: ^12.1.3
+      zod: '>=3.25.67'
+
   fastify@5.5.0:
     resolution: {integrity: sha512-ZWSWlzj3K/DcULCnCjEiC2zn2FBPdlZsSA/pnPa/dbUfLvxkD/Nqmb0XXMXLrWkeM4uQPUvjdJpwtXmTfriXqw==}
 
@@ -621,6 +635,9 @@ packages:
 
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
+  zod@4.1.5:
+    resolution: {integrity: sha512-rcUUZqlLJgBC33IT3PNMgsCq6TzLQEG/Ei/KTCU0PedSWRMAXoOUN+4t/0H+Q8bdnLPdqUYnvboJT0bn/229qg==}
 
 snapshots:
 
@@ -987,6 +1004,14 @@ snapshots:
 
   fastify-plugin@5.0.1: {}
 
+  fastify-type-provider-zod@5.0.3(@fastify/swagger@9.5.1)(fastify@5.5.0)(openapi-types@12.1.3)(zod@4.1.5):
+    dependencies:
+      '@fastify/error': 4.2.0
+      '@fastify/swagger': 9.5.1
+      fastify: 5.5.0
+      openapi-types: 12.1.3
+      zod: 4.1.5
+
   fastify@5.5.0:
     dependencies:
       '@fastify/ajv-compiler': 4.0.2
@@ -1162,3 +1187,5 @@ snapshots:
   yaml@2.8.1: {}
 
   zod@3.24.1: {}
+
+  zod@4.1.5: {}
