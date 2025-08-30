@@ -8,6 +8,11 @@ export const getUsersRoute: FastifyPluginAsync = async (server) => {
         summary: 'Get all users',
         description: 'Retrieve a list of all users',
         tags: ['Users'],
+        security: [
+          {
+            bearerAuth: []
+          }
+        ],
         querystring: {
           type: 'object',
           properties: {
@@ -51,6 +56,17 @@ export const getUsersRoute: FastifyPluginAsync = async (server) => {
                     }
                   }
                 }
+              }
+            }
+          },
+          401: {
+            description: 'Unauthorized',
+            type: 'object',
+            required: ['error'],
+            properties: {
+              error: {
+                type: 'string',
+                example: 'Unauthorized'
               }
             }
           }

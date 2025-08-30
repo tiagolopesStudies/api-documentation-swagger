@@ -46,7 +46,9 @@ app
     port: 3000
   })
   .then(() => {
-    console.log('Server is running on http://localhost:3000')
+    console.log(
+      'Server is running on http://localhost:3000 \nDocumentation is available at http://localhost:3000/docs'
+    )
   })
 
 export default app
