@@ -1,6 +1,7 @@
 import { fastify } from 'fastify';
 import { fastifyCors } from '@fastify/cors'
 import { fastifySwagger } from '@fastify/swagger'
+import scalarUI from '@scalar/fastify-api-reference'
 
 const app = fastify();
 
@@ -15,6 +16,19 @@ app.register(fastifySwagger, {
   },
 });
 
-app.get('/spec.json', () => app.swagger());
+app.get('/openapi.json', () => app.swagger());
+
+app.register(scalarUI, {
+  routePrefix: '/docs',
+  configuration: {
+    layout: 'modern',
+  }
+});
+
+app.listen({
+  port: 3000,
+}).then(() => {
+  console.log('Server is running on http://localhost:3000');
+});
 
 export default app;
